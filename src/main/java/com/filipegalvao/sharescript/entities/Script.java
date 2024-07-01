@@ -3,6 +3,7 @@ package com.filipegalvao.sharescript.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -28,6 +29,9 @@ public class Script {
 
     @Column(name = "content", nullable = false)
     private String content;
+
+    @Column(name = "creation_date", nullable = false)
+    private Date creationDate;
 
 
     @Override

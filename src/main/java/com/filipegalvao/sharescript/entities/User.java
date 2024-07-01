@@ -3,6 +3,7 @@ package com.filipegalvao.sharescript.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -28,6 +29,9 @@ public class User {
 
     @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "creation_date", nullable = false)
+    private Date creationDate;
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Script> scripts;
